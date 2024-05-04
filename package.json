@@ -1,6 +1,6 @@
 {
-  "name": "@payloadcms/template-ecommerce",
-  "description": "E-commerce template for Payload",
+  "name": "My tangle",
+  "description": "My tangle store",
   "version": "1.0.0",
   "main": "dist/server.js",
   "license": "MIT",
