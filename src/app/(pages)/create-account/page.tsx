@@ -1,13 +1,14 @@
 import React from 'react'
 import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
-import { Gutter } from '../../_components/Gutter'
 import { RenderParams } from '../../_components/RenderParams'
 import { getMeUser } from '../../_utilities/getMeUser'
 import { mergeOpenGraph } from '../../_utilities/mergeOpenGraph'
 import CreateAccountForm from './CreateAccountForm'
 
-import classes from './index.module.scss'
+import style from './index.module.scss'
 
 export default async function CreateAccount() {
   await getMeUser({
@@ -17,11 +18,30 @@ export default async function CreateAccount() {
   })
 
   return (
-    <Gutter className={classes.createAccount}>
-      <h1>Create Account</h1>
-      <RenderParams />
-      <CreateAccountForm />
-    </Gutter>
+    <section className={style.createAccount}>
+      <div className={style.heroImg}>
+        <Link href={'/'}>
+          <Image
+            src={'/logo-black.svg'}
+            alt={'logo'}
+            width={250}
+            height={23}
+            className={style.logo}
+          />
+        </Link>
+      </div>
+
+      <div className={style.formWrapper}>
+        <div className={style.formContainer}>
+          <RenderParams className={style.params} />
+          <div className={style.formTytle}>
+            <h3>Create Account</h3>
+          </div>
+          <p>Please enter details</p>
+          <CreateAccountForm />
+        </div>
+      </div>
+    </section>
   )
 }
 
