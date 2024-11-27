@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { FC, Suspense } from 'react'
 
 import { Props, RenderParamsComponent } from './Component'
 
@@ -6,7 +6,7 @@ import { Props, RenderParamsComponent } from './Component'
 // To fix this, we wrap the component in a `Suspense` component
 // See https://nextjs.org/docs/messages/deopted-into-client-rendering for more info
 
-export const RenderParams: React.FC<Props> = props => {
+export const RenderParams: FC<Props> = props => {
   return (
     <Suspense fallback={null}>
       <RenderParamsComponent {...props} />
