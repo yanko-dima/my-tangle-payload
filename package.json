@@ -1,5 +1,5 @@
 {
-  "name": "My tangle",
+  "name": "my-tangle",
   "description": "My tangle store",
   "version": "1.0.0",
   "main": "dist/server.js",
