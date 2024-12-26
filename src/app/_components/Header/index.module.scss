@@ -15,7 +15,7 @@
   width: 150px;
 }
 
-:global([data-theme="light"]) {
+:global([data-theme="dark"]) {
   .logo {
     filter: invert(1);
   }
